@@ -11,7 +11,11 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 
 public class MessageAdapter extends ArrayAdapter<Message> {
-    private static final String TAG = "DictAdapter";
+
+    private static class ViewHolder {
+        TextView name;
+        TextView home;
+    }
 
     private Context mContext;
     int mResource;
@@ -32,10 +36,10 @@ public class MessageAdapter extends ArrayAdapter<Message> {
         convertView = inflater.inflate(mResource, parent, false);
 
         TextView tv1 = (TextView)convertView.findViewById(R.id.text_message_body);
-        TextView tv2 = (TextView)convertView.findViewById(R.id.text_message_time);
+//        TextView tv2 = (TextView)convertView.findViewById(R.id.text_message_time);
 
         tv1.setText(content);
-        tv2.setText(time);
+//        tv2.setText(time);
 
         return convertView;
     }
