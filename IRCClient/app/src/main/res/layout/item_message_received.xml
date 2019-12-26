@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +17,6 @@
         android:layout_marginTop="4dp"
         android:text="@string/john_doe"
         android:textSize="12sp"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +33,6 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="@string/hi_man_how_are_you"
-        android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_message_name" />
@@ -50,4 +48,4 @@
         app:layout_constraintBottom_toBottomOf="@+id/text_message_body"
         app:layout_constraintLeft_toRightOf="@+id/text_message_body" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

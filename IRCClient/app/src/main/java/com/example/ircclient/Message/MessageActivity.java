@@ -2,7 +2,10 @@ package com.example.ircclient.Message;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.preference.PreferenceManager;
+
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
@@ -34,6 +37,14 @@ public class MessageActivity extends AppCompatActivity {
     private List<String> items =new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.key_switch_theme), false)) {
+            Log.i("ABCDE change", "nice boi");
+            setTheme(R.style.AppThemeDark);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            getDelegate().applyDayNight();
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_message);
         Intent intent = getIntent();

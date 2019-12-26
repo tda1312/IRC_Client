@@ -2,7 +2,7 @@
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,7 +18,6 @@
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
         android:text="About us"
-        android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,16 +35,16 @@
 
     </ImageView>
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.25">
 
-    </android.support.constraint.Guideline>
+    </androidx.constraintlayout.widget.Guideline>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team_description"
@@ -60,9 +59,8 @@
         android:paddingRight="25dp"
         android:paddingLeft="25dp"
         android:textSize="17sp"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/black">
-    </android.support.v7.widget.AppCompatTextView>
+        android:fontFamily="sans-serif">
+    </androidx.appcompat.widget.AppCompatTextView>
 
 
     <TableLayout
@@ -83,7 +81,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:text="@string/truong_si_thi_vu"
-                android:textColor="@color/black"
                 android:textSize="17sp"/>
         </TableRow>
 
@@ -103,7 +100,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:text="@string/nguyen_trung_dung"
-                android:textColor="@color/black"
                 android:textSize="17sp"/>
         </TableRow>
 
@@ -123,18 +119,16 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:text="@string/ta_duc_anh"
-                android:textColor="@color/black"
                 android:textSize="17sp"/>
         </TableRow>
     </TableLayout>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/theapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/the_app"
-        android:textColor="@color/black"
         android:fontFamily="sans-serif"
         android:textSize="50sp"
         app:layout_constraintHorizontal_bias="1.0"
@@ -144,7 +138,7 @@
         app:layout_constraintTop_toBottomOf="@id/teamMembers"
         app:layout_constraintVertical_bias="0.086">
 
-    </android.support.v7.widget.AppCompatTextView>
+    </androidx.appcompat.widget.AppCompatTextView>
 
     <TextView
         android:id="@+id/appDescription"
@@ -157,8 +151,7 @@
         android:paddingRight="25dp"
         android:paddingLeft="25dp"
         android:textSize="17sp"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/black">
+        android:fontFamily="sans-serif">
     </TextView>
 
     <TextView
@@ -166,9 +159,8 @@
         android:layout_width="match_parent"
         android:text="@string/enjoy_chatting"
         android:textSize="30sp"
-        android:textColor="@color/black"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/appDescription"
         app:layout_constraintBottom_toBottomOf="parent"/>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

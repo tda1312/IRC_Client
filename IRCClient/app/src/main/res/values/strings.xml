@@ -66,4 +66,8 @@
     <string name="quit_a_channel_with_a_note">Quit a channel with a note</string>
     <string name="part_note">/part note</string>
 
+    <string name="key_switch_theme">key_switch_theme</string>
+    <string name="summary_switch_theme">Try out dark theme</string>
+    <string name="title_switch_theme">Dark theme</string>
+
 </resources>
