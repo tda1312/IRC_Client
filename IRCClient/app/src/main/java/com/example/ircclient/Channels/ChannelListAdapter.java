@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.ircclient.Message;
 import com.example.ircclient.R;
 
 import java.util.ArrayList;
@@ -39,7 +38,6 @@ public class ChannelListAdapter extends ArrayAdapter<Channel> {
         TextView tvChannelName = convertView.findViewById(R.id.channelName);
         TextView tvChannelDesc = convertView.findViewById(R.id.channelDescription);
 
-        tvChannelDesc.setText(channelDescription);
         tvChannelName.setText(channelName);
 
         return convertView;

@@ -8,7 +8,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.support.v4.app.FragmentTransaction;
 
 import com.example.ircclient.Channels.ChannelFragment;
+import com.example.ircclient.Message.MessageFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private RelativeLayout layout;
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         //Drawer toolbar
         drawerLayout = findViewById(R.id.drawer);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         toggle.syncState();
 
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
         //Navigation view for side bar navigation
         NavigationView navigationView = findViewById(R.id.navigation);
         navigationView.setNavigationItemSelectedListener(this);
@@ -99,13 +102,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int itemId = item.getItemId();
-
-        switch (itemId){
-            case R.id.action_settings:
-                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-                startActivity(intent);
-                return true;
-        }
+//
+//        switch (itemId){
+//            case R.id.action_settings:
+//                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+//                startActivity(intent);
+//                return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -123,11 +126,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.commit();
         }
 
-        else if (id == R.id.settings) {
-            Intent intent = new Intent(this, SettingActivity.class);
-            startActivity(intent);
-            return true;
-        }
 
         else if (id == R.id.about) {
             AboutFragment aboutFragment = new AboutFragment();
